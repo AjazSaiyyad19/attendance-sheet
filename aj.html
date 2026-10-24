@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance Predictor</title>
+    <link rel="stylesheet" href="as.css">
+</head>
+<body>
+    <header>
+        <div class="brand">Attend<span>Smart</span></div>
+        <p>Smart Attendance Predictor for Students</p>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <h1>Attendance Dashboard</h1>
+                <p>Track your attendance and plan your next classes.</p>
+            </div>
+            <div class="target">Target Attendance <strong>75%</strong></div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Subjects</p>
+                <h2 id="totalSubjects">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Overall Attendance</p>
+                <h2 id="overallAttendance">0%</h2>
+            </div>
+            <div class="stat-card">
+                <p>Classes Attended</p>
+                <h2 id="classesAttended">0</h2>
+            </div>
+            <div class="stat-card">
+                <p>Total Classes</p>
+                <h2 id="totalClasses">0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add Subject Attendance</h2>
+            <form id="attendanceForm">
+                <div class="form-grid">
+                    <div>
+                        <label for="subjectName">Subject Name</label>
+                        <input id="subjectName" type="text"
+                               placeholder="e.g. Web Technology" required>
+                    </div>
+                    <div>
+                        <label for="totalInput">Total Classes</label>
+                        <input id="totalInput" type="number"
+                               min="0" step="1" placeholder="e.g. 40" required>
+                    </div>
+                    <div>
+                        <label for="attendedInput">Classes Attended</label>
+                        <input id="attendedInput" type="number"
+                               min="0" step="1" placeholder="e.g. 32" required>
+                    </div>
+                </div>
+                <button type="submit" class="primary-btn">+ Add Subject</button>
+                <p id="formMessage" class="message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>My Subjects</h2>
+                    <p>Attendance and prediction for each subject</p>
+                </div>
+                <button id="clearAll" class="secondary-btn" type="button">
+                    Clear All
+                </button>
+            </div>
+            <div id="subjectList" class="subject-list"></div>
+            <p id="emptyMessage" class="empty">
+                No subjects added yet. Add your first subject above!
+            </p>
+        </section>
+
+        <footer>
+            <p>Smart Attendance Predictor | Web Technology Mini Project</p>
+        </footer>
+    </main>
+
+    <script src="ss.js"></script>
+</body>
+</html>
